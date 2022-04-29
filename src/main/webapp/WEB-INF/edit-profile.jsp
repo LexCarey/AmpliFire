@@ -110,7 +110,7 @@
 				</div>
 			
 				<div class="edit-profile d-flex align-items-center">
-					<div class="edit-profile-inputs col-1 text-center">
+					<div class="col-1 text-center pfp-edit">
 					 	<h3>Edit Profile Picture</h3>
 					 	<c:set var="img" value="${user.profilepic.getProfileImagePath() }"/>
 						 <c:choose>
@@ -122,10 +122,13 @@
 						 	</c:otherwise>
 						 </c:choose>
 					 	<form:form action="/edit/profile/pfp" method="post" enctype="multipart/form-data">
-					 		 <p>
-					           <input type="file" name="fileImage" id="fileImage" accept="image/png, image/jpeg, image/jpg" />
+					 		 <div class="file-upload">
+						 		 <label id="file-image" for="fileImage">
+						 		 	Upload Pfp
+						           <input type="file" name="fileImage" id="fileImage" accept="image/png, image/jpeg, image/jpg" />
+						 		 </label>
+					 		 </div>
 					           <input type="submit" value="Submit" />
-				          	 </p>
 					 	</form:form>
 					</div>
 					<div class="edit-profile-inputs col-1">

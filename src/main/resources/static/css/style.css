@@ -96,7 +96,7 @@ select {
 	flex-grow: 1;
 }
 
-input[type=submit], button {
+input[type=submit], button, #file-image {
 	padding: 4px 16px;
 	margin-left: 10px;
 	background-color: #cf1f80;
@@ -104,9 +104,10 @@ input[type=submit], button {
 	border: 0;
 	font-weight: 600;
 	color: white;
+	cursor: pointer;
 }
 
-input[type=submit]:hover, button:hover {
+input[type=submit]:hover, button:hover, #file-image:hover {
 	transition: 200ms;
 	background-color: #ed8ad0;
 }
@@ -282,12 +283,25 @@ input[type=submit]:hover, button:hover {
 	font-weight: 500;
 }
 
-.edit-profile-inputs img {
+.pfp-edit img {
 	width: 90%;
 	height: auto;
+	margin-bottom: 8px;
 }
 
 .looks-now {
 	margin-top: 5px;
 	border-bottom: 2px solid #dedede;
+}
+
+input[type=file] {
+	display: none;
+}
+
+.file-upload {
+	margin-bottom: 8px;
+}
+
+.pfp-edit input, #file-image {
+	margin-left: 0 !important; 
 }

@@ -143,8 +143,8 @@
 						</div>
 						<p>${post.caption}</p>
 						<div class="d-flex align-items-center justify-content-between">
-							<p>${post.createdAt}</p>
-							<p>2.7k</p>
+							<p><fmt:formatDate type="both" dateStyle="medium" timeStyle="short" value="${post.createdAt}" /></p>
+							<p>2.7k Likes</p>
 						</div>
 					</div>
 				</c:forEach>
